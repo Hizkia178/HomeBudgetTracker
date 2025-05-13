@@ -1,2 +1,2 @@
 # HomeBudgetTracker
-website pengelola pendapatan dan penghasilan
+website pengelola pendapatan dan pengeluaran 
