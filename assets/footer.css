@@ -1,0 +1,145 @@
+.footer {
+    background: #212529;
+    color: #f8f9fa;
+    padding: 4rem 0 2rem;
+    margin-top: 3rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg,
+            #5e60ce 0%, #5e60ce 20%,
+            #6930c3 20%, #6930c3 40%,
+            #48bfe3 40%, #48bfe3 60%,
+            #f72585 60%, #f72585 80%,
+            #ff9e00 80%, #ff9e00 100%);
+}
+
+.footer-wave {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.footer-wave svg {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 50px;
+}
+
+.footer-wave path {
+    fill: #f8f9fd;
+}
+
+.footer-content {
+    position: relative;
+    z-index: 1;
+}
+
+.footer-heading {
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    padding: 0.4rem 0;
+}
+
+.footer-links li a {
+    color: #ced4da;
+    text-decoration: none;
+    transition: color 0.3s;
+    display: inline-flex;
+    align-items: center;
+}
+
+.footer-links li a:hover {
+    color: #ffffff;
+}
+
+.footer-links li a i {
+    margin-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.footer-social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    text-decoration: none;
+    border-radius: 50%;
+    background-color: #343a40;
+    color: #f8f9fa;
+    transition: all 0.3s;
+}
+
+.footer-social a:hover {
+    background-color: var(--primary);
+    transform: translateY(-3px);
+}
+
+.footer-social a i {
+    font-size: 1.2rem;
+}
+
+.footer-bottom {
+    padding-top: 2rem;
+    margin-top: 2rem;
+    border-top: 1px solid #343a40;
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin-bottom: 0;
+    color: #adb5bd;
+    font-size: 0.9rem;
+}
+
+.footer-logo {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.footer-logo i {
+    font-size: 2rem;
+    margin-right: 0.75rem;
+    color: var(--primary);
+}
+
+.footer-logo span {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.footer-message {
+    margin-bottom: 1.5rem;
+    color: #adb5bd;
+    line-height: 1.7;
+}

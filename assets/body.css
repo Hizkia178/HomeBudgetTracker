@@ -1,0 +1,296 @@
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --light-color: #f8f9fa;
+    --dark-color: #212529;
+    --success-color: #4cc9f0;
+    --warning-color: #ffb703;
+    --danger-color: #e63946;
+    --info-color: #48cae4;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 76px;
+    background-color: #f5f7fa;
+}
+
+.navbar {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    padding: 0.8rem 1rem;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+}
+
+.nav-link {
+    font-weight: 500;
+    padding: 0.7rem 1.2rem;
+    transition: all 0.3s;
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: width 0.3s;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 80%;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-link.active {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+}
+
+.dropdown-item {
+    color: #343a40;
+    font-weight: 500;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-item i {
+    margin-right: 8px;
+}
+
+.dropdown-item.view-profile:hover {
+    background-color: #e7f1ff;
+    color: var(--primary-color);
+}
+
+.dropdown-item.logout:hover {
+    background-color: #ffe7e7;
+    color: #dc3545;
+}
+
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+
+.dashboard-card {
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    border: none;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+.profile-card {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: rgba(248, 249, 250, 0.95);
+    backdrop-filter: blur(5px); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    z-index: 2;
+    gap: 1rem;
+}
+
+.profile-card:hover {
+    transform: translateY(-3px); 
+}
+
+.profile-card .profile-icon {
+    font-size: 2.5rem;
+    color: #5B72F2; 
+    background: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card .profile-details h6 {
+    margin: 0;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #1a1a1a; 
+}
+
+.profile-card .profile-details small {
+    font-size: 0.85rem;
+    color: #6c757d; 
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.text-primary-dark {
+    color: var(--secondary-color);
+}
+
+.bg-light-primary {
+    background-color: rgba(67, 97, 238, 0.1);
+}
+
+.bg-light-success {
+    background-color: rgba(76, 201, 240, 0.1);
+}
+
+.bg-light-warning {
+    background-color: rgba(255, 183, 3, 0.1);
+}
+
+.bg-light-danger {
+    background-color: rgba(230, 57, 70, 0.1);
+}
+
+/* Chart Container */
+.chart-container {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Recent Transactions */
+.transaction-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.transaction-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+}
+
+.transaction-details {
+    flex-grow: 1;
+}
+
+.transaction-category {
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+.transaction-amount {
+    font-weight: bold;
+    text-align: right;
+}
+
+.amount-expense {
+    color: var(--danger-color);
+}
+
+.amount-income {
+    color: var(--success-color);
+}
+
+/* Budget Progress */
+.budget-progress {
+    margin-bottom: 1rem;
+}
+
+.progress {
+    height: 8px;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.welcome-section {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.quick-actions {
+    margin-bottom: 1.5rem;
+}
+
+.quick-action-btn {
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    transition: all 0.3s;
+    border: none;
+    margin-bottom: 1rem;
+    background-color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.quick-action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quick-action-icon {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .navbar-brand span {
+        font-size: 0.9rem;
+    }
+
+    .dashboard-card {
+        margin-bottom: 1rem;
+    }
+}
+
